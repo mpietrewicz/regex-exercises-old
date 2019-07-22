@@ -18,7 +18,7 @@ public class AnyAlphaAnyNonalpha {
         love@email.pl
         3,5l@email.com
      */
-    public static Pattern EMAIL_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern EMAIL_PATTERN = Pattern.compile("\\w+@email.com");
 
 
     /*
@@ -31,7 +31,7 @@ public class AnyAlphaAnyNonalpha {
         Password: 123abc/
         Password: I<3you!
      */
-    public static Pattern PASS_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern PASS_PATTERN = Pattern.compile(".+[!@#$%^&*(),.?\":{}|<>]{2}");
 
 
     /*

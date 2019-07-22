@@ -20,14 +20,12 @@ public class AnyAlphaAnyNonalphaTest {
         @Test
         @DisplayName("should return true for anna@email.com")
         void email_anna() {
-            fail();
             assertTrue(AnyAlphaAnyNonalpha.EMAIL_PATTERN.matcher("anna@email.com").matches());
         }
 
         @Test
         @DisplayName("should return true for 1234@email.com")
         void email_1234() {
-            fail();
             assertTrue(AnyAlphaAnyNonalpha.EMAIL_PATTERN.matcher("1234@email.com").matches());
         }
 
@@ -40,21 +38,18 @@ public class AnyAlphaAnyNonalphaTest {
         @Test
         @DisplayName("should return false for .ha!@email.com")
         void email_ha() {
-            fail();
             assertFalse(AnyAlphaAnyNonalpha.EMAIL_PATTERN.matcher(".ha!@email.com").matches());
         }
 
         @Test
         @DisplayName("should return false for love@email.pl")
         void email_pl() {
-            fail();
             assertFalse(AnyAlphaAnyNonalpha.EMAIL_PATTERN.matcher("love@email.pl").matches());
         }
 
         @Test
         @DisplayName("should return false for 3,5l@email.com")
         void email_35l() {
-            fail();
             assertFalse(AnyAlphaAnyNonalpha.EMAIL_PATTERN.matcher("3,5l@email.com").matches());
         }
     }
@@ -74,35 +69,30 @@ public class AnyAlphaAnyNonalphaTest {
         @Test
         @DisplayName("should return true for Password: 111win.*")
         void pass_111win() {
-            fail();
             assertTrue(AnyAlphaAnyNonalpha.PASS_PATTERN.matcher("Password: 111win.*").matches());
         }
 
         @Test
         @DisplayName("should return true for Password: P4SS01&@")
         void pass_P4SS01() {
-            fail();
             assertTrue(AnyAlphaAnyNonalpha.PASS_PATTERN.matcher("Password: P4SS01&@").matches());
         }
 
         @Test
         @DisplayName("should return false for Password: MISsion@")
         void pass_MISsion() {
-            fail();
             assertFalse(AnyAlphaAnyNonalpha.PASS_PATTERN.matcher("Password: MISsion@").matches());
         }
 
         @Test
         @DisplayName("should return false for Password: 123abc/")
         void pass_123abc() {
-            fail();
             assertFalse(AnyAlphaAnyNonalpha.PASS_PATTERN.matcher("Password: 123abc/").matches());
         }
 
         @Test
         @DisplayName("should return false for Password: I<3you!")
         void pass_I3you() {
-            fail();
             assertFalse(AnyAlphaAnyNonalpha.PASS_PATTERN.matcher("Password: I<3you!").matches());
         }
     }
